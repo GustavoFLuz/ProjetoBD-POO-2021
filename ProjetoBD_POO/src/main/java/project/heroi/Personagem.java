@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Personagem implements project.utils.CrudBasics{
-    
+
     public static void add(){
         Scanner sc = new Scanner(System.in);
         Heroi heroi = null;

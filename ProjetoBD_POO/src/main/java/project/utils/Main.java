@@ -9,6 +9,10 @@ public class Main {
 
     public static void main(String[] args) {
 
+        CriarHerois();
+        CriarInimigos();
+        CriarLogs();
+
         Cenarios.menu();
 
     }
@@ -24,20 +28,23 @@ public class Main {
     }
 
     public static void CriarInimigos(){
-        Inimigo inimigo1 = new Inimigo ("inimigo1", 100, 10, 10, 10, 100);
-        Inimigo inimigo2 = new Inimigo ("inimigo2", 200, 20, 20, 20, 200);
-        Inimigo inimigo3 = new Inimigo ("inimigo3", 300, 30, 30, 30, 300);
+        Inimigo inimigoFraco = new Inimigo ("inimigoFraco", 100, 10, 10, 10, 100);
+        Inimigo inimigoMedio = new Inimigo ("inimigoMedio", 200, 20, 20, 20, 200);
+        Inimigo inimigoForte = new Inimigo ("inimigoForte", 300, 30, 30, 30, 300);
 
-        InimigoBD.addInimigo(inimigo1);
-        InimigoBD.addInimigo(inimigo1);
-        InimigoBD.addInimigo(inimigo2);
-        InimigoBD.addInimigo(inimigo3);
+        for(int i=0; i<5; i++){
+            InimigoBD.addInimigo(inimigoFraco);
+        }
+        for(int i=0; i<3; i++){
+            InimigoBD.addInimigo(inimigoMedio);
+        }
+        InimigoBD.addInimigo(inimigoForte);
     }
 
     public static void CriarLogs(){
-        LogsBD.addLogs("Guerreiro", "inimigo1", 100);
-        LogsBD.addLogs("Guerreiro", "inimigo2", 156);
-        LogsBD.addLogs("Guerreiro", "inimigo1", 200);
+        LogsBD.addLogs("Arqueiro", "inimigoFraco", 100);
+        LogsBD.addLogs("Arqueiro", "inimigoMedio", 156);
+        LogsBD.addLogs("Arqueiro", "inimigoFraco", 200);
     }
 
 }

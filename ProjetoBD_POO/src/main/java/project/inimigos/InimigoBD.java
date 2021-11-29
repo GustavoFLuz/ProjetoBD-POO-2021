@@ -172,6 +172,7 @@ public class InimigoBD {
 
     public static void mudarNome(String nomeantigo, String novonome){
         int id = getIdInimigo(nomeantigo);
+        connect();
         String sql = "UPDATE encontraveis SET nome = ? WHERE id = ?";
         try{
             pst = connection.prepareStatement(sql);

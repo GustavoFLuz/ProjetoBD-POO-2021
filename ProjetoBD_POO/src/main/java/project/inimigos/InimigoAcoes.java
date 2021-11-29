@@ -82,6 +82,7 @@ public class InimigoAcoes implements project.utils.CrudBasics{
                     System.out.println("Digite o novo nome: ");
                     String nome = sc.nextLine();
                     InimigoBD.mudarNome(inimigo.getNome(), nome);
+                    inimigo.setNome(nome);
                 }
                 case 2 -> {
                     System.out.println("Digite os novos atributos:");

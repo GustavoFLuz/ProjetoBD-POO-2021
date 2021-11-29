@@ -2,7 +2,12 @@ package project.utils;
 
 public interface CrudBasics {
 
+
     public static void add() {
+
+    }
+
+    public static void edit() {
 
     }
 
@@ -10,7 +15,4 @@ public interface CrudBasics {
 
     }
 
-    public static void edit() {
-
-    }
 }
